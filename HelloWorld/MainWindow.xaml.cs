@@ -33,18 +33,13 @@ namespace HelloWorld
 
         private void uxTextChanged(object sender, TextChangedEventArgs e)
         {
-            uxSubmit.IsEnabled = (uxName.Text != "" && uxPassword.Password!= "");
+            uxSubmit.IsEnabled = (uxName.Text != string.Empty  && uxPassword.Password!=string.Empty);
         }
 
-       private void uxPassword_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+    
+        private void uxPassword_PasswordChanged(object sender, RoutedEventArgs e)
         {
             uxSubmit.IsEnabled = (uxName.Text != "" && uxPassword.Password != "");
-        }
-
-        private void uxName_TextInput(object sender, TextCompositionEventArgs e)
-        {
-            uxSubmit.IsEnabled = (uxName.Text != "" && uxPassword.Password != "");
-
         }
     }
 }

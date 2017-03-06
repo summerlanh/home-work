@@ -11,10 +11,10 @@
       <TextBox x:Name="uxInput" />
       <Label Content="{Binding Text, ElementName=uxInput}" />
       <TextBlock>Enter Name:</TextBlock>
-      <TextBox x:Name="uxName" TextInput="uxName_TextInput"/>
+      <TextBox x:Name="uxName" TextChanged="uxTextChanged"/>
       <TextBlock>Enter Password:</TextBlock>
-      <PasswordBox  x:Name="uxPassword" DataContextChanged="uxPassword_DataContextChanged"/>
-      <Button x:Name="uxSubmit" Click="uxSubmit_Click" Content="Submit"/>
+      <PasswordBox  x:Name="uxPassword" PasswordChanged="uxPassword_PasswordChanged"/>
+      <Button x:Name="uxSubmit" Click="uxSubmit_Click" Content="Submit" IsEnabled="False"/>
       <Button>
          <StackPanel Orientation="Horizontal">
             <Image Source="image/ic_thumb_up_black_24dp_2x.png" />
