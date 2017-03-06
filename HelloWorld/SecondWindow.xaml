@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:HelloWorld"
         mc:Ignorable="d"
         Title="SecondWindow" Height="300" Width="300">
-    <Grid>
-        <ListView x:Name="uxList"></ListView>
-    </Grid>
+   <Grid>
+      <ListView x:Name="uxList">
+         <ListView.View>
+            <GridView AllowsColumnReorder="true" >
+               <GridViewColumn DisplayMemberBinding=
+                                "{Binding Path=Name}" Header="Name"/>
+               <GridViewColumn DisplayMemberBinding=
+                                "{Binding Path=Password}"  Header="Password"/>
+            </GridView>
+         </ListView.View>
+      </ListView>
+   </Grid>
 </Window>

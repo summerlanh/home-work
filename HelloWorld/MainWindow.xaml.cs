@@ -28,7 +28,9 @@ namespace HelloWorld
 
         private void uxSubmit_Click(object sender, RoutedEventArgs e)
         {
-        
+            int x = 1;
+            x = x / (x - 1);
+
             MessageBox.Show("Submitting password:" + uxPassword.Password);
 
             var window = new SecondWindow();
