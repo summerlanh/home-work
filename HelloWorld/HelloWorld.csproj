@@ -73,7 +73,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\test.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="PanelWindow.xaml.cs">
       <DependentUpon>PanelWindow.xaml</DependentUpon>
