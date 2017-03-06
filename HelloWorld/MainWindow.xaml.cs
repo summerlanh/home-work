@@ -23,21 +23,28 @@ namespace HelloWorld
         public MainWindow()
         {
             InitializeComponent();
+            //WindowState = WindowState.Maximized;
         }
 
         private void uxSubmit_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Submitting password:" + uxPassword.Text);
+            MessageBox.Show("Submitting password:" + uxPassword.Password);
         }
 
-        private void uxPassword_TextChanged(object sender, TextChangedEventArgs e)
+        private void uxTextChanged(object sender, TextChangedEventArgs e)
         {
-            uxSubmit.IsEnabled = (uxName.Text != "" && uxPassword.Text != "");
+            uxSubmit.IsEnabled = (uxName.Text != "" && uxPassword.Password!= "");
         }
 
-        private void uxName_TextChanged(object sender, TextChangedEventArgs e)
+       private void uxPassword_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            uxSubmit.IsEnabled = (uxName.Text != "" && uxPassword.Text != "");
+            uxSubmit.IsEnabled = (uxName.Text != "" && uxPassword.Password != "");
+        }
+
+        private void uxName_TextInput(object sender, TextCompositionEventArgs e)
+        {
+            uxSubmit.IsEnabled = (uxName.Text != "" && uxPassword.Password != "");
+
         }
     }
 }
