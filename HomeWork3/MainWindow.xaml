@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
-    </Grid>
+      <ListView x:Name="uxList">
+         <ListView.View>
+            <GridView AllowsColumnReorder="true">
+               <GridViewColumn DisplayMemberBinding="{Binding Name}" Width="50 ">
+                  <GridViewColumnHeader Click="NameColumnHeader_Click">Name                    
+                  </GridViewColumnHeader>
+               </GridViewColumn>
+               <GridViewColumn DisplayMemberBinding="{Binding Password}"  Width="70">
+                  <GridViewColumnHeader Click="PasswordColumnHeader_Click">Password
+                  </GridViewColumnHeader>
+               </GridViewColumn>
+            </GridView>
+         </ListView.View>
+      </ListView>
+   </Grid>
 </Window>

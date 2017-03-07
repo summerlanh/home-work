@@ -20,9 +20,33 @@ namespace HomeWork3
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Models.User> users = new List<Models.User>();
+
         public MainWindow()
         {
             InitializeComponent();
+            users.Add(new Models.User { Name = "Dave", Password = "1DavePwd" });
+            users.Add(new Models.User { Name = "Steve", Password = "2StevePwd" });
+            users.Add(new Models.User { Name = "Lisa", Password = "3LisaPwd" });
+            uxList.ItemsSource = users;
+        }
+        
+        private void NameColumnHeader_Click(object sender, RoutedEventArgs e)
+        {
+            var usersAscending =
+                from user in users
+                orderby user.Name
+                select user;
+            uxList.ItemsSource = usersAscending;
+        }
+
+        private void PasswordColumnHeader_Click(object sender, RoutedEventArgs e)
+        {
+            var usersAscending =
+                from user in users
+                orderby user.Password
+                select user;
+            uxList.ItemsSource = usersAscending;
         }
     }
 }
