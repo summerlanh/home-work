@@ -30,8 +30,8 @@ namespace Generic
 
     public class MyStack<T>
     {
-        private T[] stack = new T[3];
-        private int sp;
+        T[] stack = new T[10];
+        int sp;
 
         public void Push(T item)
         {
@@ -45,14 +45,7 @@ namespace Generic
 
         public bool IsEmpty()
         {
-            if (sp == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return sp == 0;
         }
     }
 }
