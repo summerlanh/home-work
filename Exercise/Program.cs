@@ -29,7 +29,7 @@ namespace test
 
     public class MyStack<T>
     {
-        private T[] stack = new T[2];
+        private T[] stack = new T[3];
         private int sp;
 
         public void Push(T item)
