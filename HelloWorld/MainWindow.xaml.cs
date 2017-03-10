@@ -27,13 +27,13 @@ namespace HelloWorld
         public MainWindow()
         {
             InitializeComponent();
-            WindowState = WindowState.Maximized;
+            WindowState = WindowState.Maximized;         
         }
+
         public override void EndInit()
         {
             base.EndInit();
             uxContainer.DataContext=user;
-
             var sample = new SampleEntities();
             sample.Users.Load();
             uxList.ItemsSource = sample.Users.Local;
