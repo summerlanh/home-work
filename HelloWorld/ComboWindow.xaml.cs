@@ -25,7 +25,7 @@ namespace HelloWorld
             InitializeComponent();
             var sample = new SampleEntities();
             sample.Users.Load();
-            uxComboBox.DataContext = sample.Users.Local;
+            uxComboBox.ItemsSource = sample.Users.Local;
         }
 
         private void uxComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
