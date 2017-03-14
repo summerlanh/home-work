@@ -18,6 +18,6 @@
 
    <StackPanel>
       <TextBox x:Name="uxName" Text="Name" Style="{StaticResource Input2}" />
-      <TextBox x:Name="uxPassword" Text="Password" Style="{StaticResource Input}"/>
+      <TextBox x:Name="uxPassword" Text="Password" Style="{StaticResource Input2}"/>
    </StackPanel>
 </Window>
