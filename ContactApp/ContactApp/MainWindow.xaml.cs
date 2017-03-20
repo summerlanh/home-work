@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApplication1
+namespace ContactApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +23,16 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
+        }
+      
+        private void uxFileNew_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new ContactWindow();
+
+            if (window.ShowDialog() == true)
+            {
+                App.ContactRepository.Add(window.Contact.ToRepositoryModel());
+            }
         }
     }
 }
