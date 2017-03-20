@@ -63,42 +63,42 @@ namespace Tic_Tac_Toe
             if ((btn1.Content == btn5.Content) & (btn5.Content == btn9.Content)& (btn1.Content!=null) )
             {
                 winBtn = btn1;
-                Win(winBtn);
+                Win();
             }
             else if ((btn1.Content == btn2.Content) & (btn2.Content == btn3.Content) & (btn1.Content != null))
             {
                 winBtn = btn1;
-                Win(winBtn);
+                Win();
             }
             else if ((btn1.Content == btn4.Content) & (btn4.Content == btn7.Content) & (btn1.Content != null))
             {
                 winBtn = btn1;
-                Win(winBtn);
+                Win();
             }
             else if ((btn2.Content == btn5.Content) &(btn5.Content== btn8.Content) & (btn2.Content != null))
             {
                 winBtn = btn2;
-                Win(winBtn);
+                Win();
             }
             else if ((btn3.Content == btn6.Content) & (btn6.Content == btn9.Content) & (btn3.Content != null))
             {
                 winBtn = btn3;
-                Win(winBtn);
+                Win();
             }
             else if ((btn3.Content == btn5.Content) & (btn5.Content == btn7.Content) & (btn3.Content != null))
             {
                 winBtn = btn3;
-                Win(winBtn);
+                Win();
             }
             else if ((btn4.Content == btn5.Content) & (btn5.Content == btn6.Content) & (btn4.Content != null))
             {
                 winBtn = btn4;
-                Win(winBtn);
+                Win();
             }
             else if ((btn7.Content == btn8.Content) & (btn8.Content == btn9.Content) & (btn7.Content != null))
             {
                 winBtn = btn7;
-                Win(winBtn);
+                Win();
             }
             else if (x % 2 == 0)
             {
@@ -110,7 +110,7 @@ namespace Tic_Tac_Toe
             }
         }
 
-        private void Win(Button winBtn)
+        private void Win()
         {
             uxTurn.Text = winBtn.Content + " is a Winner!";
             foreach (Button btn in uxGrid.Children)
