@@ -48,7 +48,7 @@ namespace ContactApp
             }
 
             Contact.PhoneNumber = uxPhoneNumber.Text;
-            Contact.Age = 0;
+            Contact.Age = (int)uxAge.Value;
             Contact.Notes = uxNotes.Text;
             Contact.CreatedDate = DateTime.Now;
 

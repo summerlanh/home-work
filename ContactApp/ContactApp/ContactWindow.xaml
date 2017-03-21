@@ -37,6 +37,11 @@
          <RadioButton x:Name="uxHome" IsChecked="true">Home</RadioButton>
          <RadioButton x:Name="uxMobile">Mobile</RadioButton>
       </StackPanel>
+      <TextBlock Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right">Age:</TextBlock>
+      <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="4">
+         <TextBlock Text="{Binding ElementName=uxAge, Path=Value}" Width="20"></TextBlock>
+         <Slider Name="uxAge" Maximum="100" Width="150" IsSnapToTickEnabled="True"></Slider>
+      </StackPanel>
 
       <TextBlock Grid.Column="0" Grid.Row="5" HorizontalAlignment="Right">Notes:</TextBlock>
       <TextBox x:Name="uxNotes" Grid.Column="1" Grid.Row="5" AcceptsReturn="True" TextWrapping="Wrap" Height="60"></TextBox>
