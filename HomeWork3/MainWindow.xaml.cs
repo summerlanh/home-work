@@ -39,7 +39,7 @@ namespace HomeWork3
             view.SortDescriptions.Clear();
             view.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
 
-
+            // using Ling
             //    var usersAscending =
             //        from user in users
             //        orderby user.Name
