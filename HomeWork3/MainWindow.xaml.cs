@@ -35,11 +35,17 @@ namespace HomeWork3
 
         private void NameColumnHeader_Click(object sender, RoutedEventArgs e)
         {
-            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(uxList.ItemsSource);
-            view.SortDescriptions.Clear();
-            view.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
+            uxList.Items.SortDescriptions.Clear();
+            uxList.Items.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
 
-            // using Ling
+            // another way to sort:
+
+            //CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(uxList.ItemsSource);
+            //view.SortDescriptions.Clear();
+            //view.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
+
+            // using Ling:
+
             //    var usersAscending =
             //        from user in users
             //        orderby user.Name
