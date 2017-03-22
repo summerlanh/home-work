@@ -27,8 +27,8 @@ namespace ContactApp
             InitializeComponent();
             LoadContacts();
         }
-        private GridViewColumnHeader listViewSortCol = null;
-        private SortAdorner listViewSortAdorner = null;
+        //private GridViewColumnHeader listViewSortCol = null;
+        //private SortAdorner listViewSortAdorner = null;
         private ContactModel selectedContact;
 
 
@@ -59,14 +59,14 @@ namespace ContactApp
 
             if (window.ShowDialog() == true)
             {
-                var uiContactModel = window.Contact;
+                //var uiContactModel = window.Contact;
 
-                var repositoryContactModel = uiContactModel.ToRepositoryModel();
+                //var repositoryContactModel = uiContactModel.ToRepositoryModel();
 
-                App.ContactRepository.Add(repositoryContactModel);
+                //App.ContactRepository.Add(repositoryContactModel);
 
-                // OR
-                //App.ContactRepository.Add(window.Contact.ToRepositoryModel());
+
+                App.ContactRepository.Add(window.Contact.ToRepositoryModel());
 
                 LoadContacts();
             }
@@ -88,9 +88,10 @@ namespace ContactApp
         {
             GridViewColumnHeader column = (sender as GridViewColumnHeader);
             string sortBy = column.Tag.ToString();
+            uxContactList.Items.SortDescriptions.Clear();
+            uxContactList.Items.SortDescriptions.Add(new SortDescription(sortBy, ListSortDirection.Ascending));
 
-           
-            if (listViewSortCol != null)
+            /*if (listViewSortCol != null)
             {
                 AdornerLayer.GetAdornerLayer(listViewSortCol).Remove(listViewSortAdorner);
                 uxContactList.Items.SortDescriptions.Clear();
@@ -103,7 +104,7 @@ namespace ContactApp
             listViewSortCol = column;
             listViewSortAdorner = new SortAdorner(listViewSortCol, newDir);
             AdornerLayer.GetAdornerLayer(listViewSortCol).Add(listViewSortAdorner);
-            uxContactList.Items.SortDescriptions.Add(new SortDescription(sortBy, newDir));
+            uxContactList.Items.SortDescriptions.Add(new SortDescription(sortBy, newDir));*/
         }
 
 
@@ -116,10 +117,10 @@ namespace ContactApp
         {
             uxFileDelete.IsEnabled = (selectedContact != null);
             uxContextFileDelete.IsEnabled = (selectedContact != null);
-
         }
     }
-    public class SortAdorner : Adorner
+
+   /* public class SortAdorner : Adorner
     {
         private static Geometry ascGeometry =
                 Geometry.Parse("M 0 4 L 3.5 0 L 7 4 Z");
@@ -156,7 +157,7 @@ namespace ContactApp
 
             drawingContext.Pop();
         }
-    }
+    }*/
 }
 
 
