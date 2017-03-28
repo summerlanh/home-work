@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetTrackerDB", "PetTrackerDB\PetTrackerDB.csproj", "{F770DE46-6A0F-449C-8A93-8DF6E1DDAA75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetTrackerRepository", "PetTrackerRepository\PetTrackerRepository.csproj", "{EA619EA6-B876-45F8-8033-2BF918CAB919}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetTracker", "PetTracker\PetTracker.csproj", "{82034948-B922-4CC5-8C96-65517BD6C347}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F770DE46-6A0F-449C-8A93-8DF6E1DDAA75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F770DE46-6A0F-449C-8A93-8DF6E1DDAA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F770DE46-6A0F-449C-8A93-8DF6E1DDAA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F770DE46-6A0F-449C-8A93-8DF6E1DDAA75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA619EA6-B876-45F8-8033-2BF918CAB919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA619EA6-B876-45F8-8033-2BF918CAB919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA619EA6-B876-45F8-8033-2BF918CAB919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA619EA6-B876-45F8-8033-2BF918CAB919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82034948-B922-4CC5-8C96-65517BD6C347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82034948-B922-4CC5-8C96-65517BD6C347}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82034948-B922-4CC5-8C96-65517BD6C347}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82034948-B922-4CC5-8C96-65517BD6C347}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
