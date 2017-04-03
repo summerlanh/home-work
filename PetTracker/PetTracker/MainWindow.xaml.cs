@@ -79,7 +79,7 @@ namespace PetTracker
 
                     if (selectedRepositoryModel == null)
                     {
-                        MessageBox.Show("Can't fint this record.");
+                        MessageBox.Show("Can't find this record.");
                     }
                     else if (selectedRepositoryModel != null)
                     {
@@ -113,7 +113,7 @@ namespace PetTracker
 
                     if (selectedRepositoryModel == null)
                     {
-                        MessageBox.Show("Can't fint this record.");
+                        MessageBox.Show("Can't find this record.");
                     }
                     else if (selectedRepositoryModel != null)
                     {

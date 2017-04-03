@@ -74,7 +74,14 @@ namespace ContactApp
 
         private void uxFileChange_Click(object sender, RoutedEventArgs e)
         {
+            var window = new ContactWindow();
+            window.Contact = selectedContact.Clone();
 
+            if (window.ShowDialog() == true)
+            {
+                App.ContactRepository.Update(window.Contact.ToRepositoryModel());
+                LoadContacts();
+            }
         }
 
         private void uxFileDelete_Click(object sender, RoutedEventArgs e)
@@ -116,8 +123,16 @@ namespace ContactApp
         private void uxFileDelete_Loaded(object sender, RoutedEventArgs e)
         {
             uxFileDelete.IsEnabled = (selectedContact != null);
-            uxContextFileDelete.IsEnabled = (selectedContact != null);
+            uxContextFileDelete.IsEnabled = uxFileDelete.IsEnabled;
         }
+
+        private void uxFileChange_Loaded(object sender, RoutedEventArgs e)
+        {
+            uxFileChange.IsEnabled = (selectedContact != null);
+            uxContextFileChange.IsEnabled = uxFileChange.IsEnabled;
+        }
+
+       
     }
 
    /* public class SortAdorner : Adorner

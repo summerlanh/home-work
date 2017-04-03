@@ -28,15 +28,35 @@ namespace ContactApp
             // Don't show this window in the task bar
             ShowInTaskbar = false;
         }
-
+        
         public ContactModel Contact { get; set; }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (Contact != null)
+            {
+                if (Contact.PhoneType == "Home")
+                {
+                    uxHome.IsChecked = true;
+                }
+                else
+                {
+                    uxMobile.IsChecked = true;
+                }
+                uxSubmit.Content = "Update";
+            }
+            else
+            {
+                Contact = new ContactModel();
+                Contact.CreatedDate = DateTime.Now;
+            }
+
+            uxGrid.DataContext = Contact;
+        }
 
         private void uxSubmit_Click(object sender, RoutedEventArgs e)
         {
-            Contact = new ContactModel();
-
-            Contact.Name = uxName.Text;
-            Contact.Email = uxEmail.Text;
+            
 
             if (uxHome.IsChecked.Value)
             {
@@ -47,10 +67,7 @@ namespace ContactApp
                 Contact.PhoneType = "Mobile";
             }
 
-            Contact.PhoneNumber = uxPhoneNumber.Text;
-            Contact.Age = (int)uxAge.Value;
-            Contact.Notes = uxNotes.Text;
-            Contact.CreatedDate = DateTime.Now;
+            
 
             DialogResult = true;
             Close();

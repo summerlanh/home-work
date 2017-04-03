@@ -17,6 +17,11 @@ namespace ContactApp.Models
         public string Notes { get; set; }
         public DateTime CreatedDate { get; set; }
 
+        internal ContactModel Clone()
+        {
+            return (ContactModel)MemberwiseClone(); //unboxing to get ContactModel
+        }
+
         public ContactRepository.ContactModel ToRepositoryModel()
         {
             var repositoryModel = new ContactRepository.ContactModel

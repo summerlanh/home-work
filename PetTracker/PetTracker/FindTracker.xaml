@@ -12,7 +12,7 @@
          <TextBlock>Please enter the pet number you are going to update:</TextBlock>
          <TextBox x:Name="uxNumber"></TextBox>
          <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right">
-         <Button x:Name="uxSubmit"  MinWidth="10" HorizontalAlignment="Center"  Margin="10" Click="uxSubmit_Click">Submit</Button>
+         <Button x:Name="uxSubmit"  MinWidth="10" HorizontalAlignment="Center"  Margin="10" Click="uxSubmit_Click">Search</Button>
             <Button x:Name="uxCancel"  MinWidth="10" HorizontalAlignment="Center"  Margin="10" Click="uxCancel_Click">Cancel</Button>
          </StackPanel>
       </StackPanel>  
